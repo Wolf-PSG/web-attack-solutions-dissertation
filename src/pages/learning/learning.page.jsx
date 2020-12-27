@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
-import CodePreview from '../../components/codePreview/codePreview.component';
+import { useAttackDispatch } from '../../context/attackStore';
+import Zone from '../learningZone/zone.page';
 import './learning.style.scss';
 const Learning = () => {
+    const dispatch = useAttackDispatch();
     const [attack, setAttack] = useState('');
     const handleClick = (e) => {
         const { id } = e.currentTarget;
-        console.log(e);
-        setAttack(id);
+        dispatch({ type: 'CHANGE_ATTACK', payload: id });
     };
     return (
         <div className="learning-container">
@@ -23,7 +24,7 @@ const Learning = () => {
                 <li>
                     <button
                         className="learning-option"
-                        id="data_sanitisation"
+                        id="data sanitisation"
                         onClick={handleClick}
                     >
                         Data Sanitisation
@@ -32,7 +33,7 @@ const Learning = () => {
                 <li>
                     <button
                         className="learning-option"
-                        id="rate_limiting"
+                        id="rate limiting"
                         onClick={handleClick}
                     >
                         Rate Limiting
@@ -47,6 +48,18 @@ const Learning = () => {
                         DDOS
                     </button>
                 </li>
+                <li>
+                    <button
+                        className="learning-option"
+                        id="sql injection"
+                        onClick={handleClick}
+                    >
+                        SQL Injection
+                    </button>
+                </li>
+            </div>
+            <div className="zone-container">
+                <Zone />
             </div>
         </div>
     );

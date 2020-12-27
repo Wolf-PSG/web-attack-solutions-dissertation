@@ -1,17 +1,29 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { a11yLight } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import 'highlight.js/styles/vs2015.css';
+
 // import './codePreview.style.scss';
-const CodePreview = () => {
+const CodePreview = ({ props }) => {
+    const [code, setCode] = useState('');
+    const [response, setResponse] = useState({});
+    const [failedRes, setFailedRes] = useState({});
+    useEffect(() => {
+        const code_xss = "axios.get('https://localhost:3000/xss)";
+        switch (props) {
+            case 'xss':
+                setCode(code_xss);
+                break;
+            default:
+                setCode('');
+        }
+    }, [props]);
     return (
         <div className="codePreview-container">
-            <h1> Protect Your Application </h1>
-            <button className="goto_learning">
-                <Link to="/learning" className="link_learning">
-                    Learn More
-                </Link>
-            </button>
-
-            {/* <h3> click the </h3> */}
+            <SyntaxHighlighter language="javascript" style={a11yLight}>
+                {code}
+            </SyntaxHighlighter>
         </div>
     );
 };
