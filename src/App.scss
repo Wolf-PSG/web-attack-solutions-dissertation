@@ -1,0 +1,58 @@
+$primary: #1a237e;
+$secondary: #534bae;
+$buttonsPrimary: #fbd786;
+$buttonsSecondary: #f7c247;
+
+input {
+    vertical-align: top;
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid black;
+    outline: 0;
+    font-size: 1.3rem;
+    color: black;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+}
+
+input:hover {
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 3px;
+    border-image: linear-gradient(to right, $primary, $secondary);
+    border-image-slice: 1;
+}
+/* reset input */
+/* input {
+    &:required,
+    &:invalid {
+        box-shadow: none;
+    }
+} */
+
+button {
+    width: 170px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    /* margin-left: 30px; */
+    margin-bottom: 30px;
+    cursor: pointer;
+    display: inline-block;
+    border: 2px solid #534bae; /*#3c73ff; */
+    background-color: #1a237e;
+    color: white;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+button:hover {
+    box-shadow: 8px 8px #99bdff;
+    transition: 0.3s;
+    outline-width: 0;
+    text-decoration: none;
+}

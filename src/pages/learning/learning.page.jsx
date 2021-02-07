@@ -4,7 +4,6 @@ import Zone from '../learningZone/zone.page';
 import './learning.style.scss';
 const Learning = () => {
     const dispatch = useAttackDispatch();
-    const [attack, setAttack] = useState('');
     const handleClick = (e) => {
         const { id } = e.currentTarget;
         dispatch({ type: 'CHANGE_ATTACK', payload: id });
