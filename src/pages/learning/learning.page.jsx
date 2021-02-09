@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useAttackDispatch } from '../../context/attackStore';
 import Zone from '../learningZone/zone.page';
 import './learning.style.scss';
