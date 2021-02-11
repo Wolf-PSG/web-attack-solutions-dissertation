@@ -4,14 +4,14 @@ const Content = ({ props }) => {
     const [content, setContent] = useState({});
     useEffect(() => {
         const content_xss = {
-            subtitle: 'Preventing Cross-Site Scripting',
+            subtitle: `alert('hacked')`,
             desc:
                 'Cross-Site Scripting is a type of injection attack, which aims to inject malicious scripts inside a website',
             desc_2:
                 "Generally the attacker would inject to script into an unprotected form. These attacks are most successful on sites which don't validate user inputs.",
             desc_3:
                 "These attacks can affect unsuspecting users because that user's browser has no way of checking if the script should be trusted which can then give the script access to cookies and session tokens and be able to take sensitive information from the victims",
-            list: 'Protecting yourself from XSS attacks can be done by:',
+            list: 'How to protect yourself from XSS attacks',
             list_el: [[]],
             code: '',
         };
@@ -49,7 +49,7 @@ const Content = ({ props }) => {
             list_el: [
                 [
                     'Libraries:',
-                    "There are many libraries/packages avalible for almost every language. \n Laravel has built in functionality, Nodejs + Express have a npm package called 'express-rate-limit' and Python has a Pypi Library called 'ratelimit' etc \n It is recommeneded to use a framework when creating a backend server as alot of securtiy functioanlity are backed into the framework and with the sheer amount of support provided within the framework's community, development should go smoothly as WEBGL_lose_context.",
+                    "There are many libraries/packages avalible for almost every language. \n Laravel has built in functionality, Nodejs + Express have a npm package called 'express-rate-limit' and Python has a Pypi Library called 'ratelimit' etc \n It is recommeneded to use a framework when creating a backend server as alot of securtiy functioanlity are baked into the framework and with the sheer amount of support provided within the framework's community, development should go smoothly.",
                 ],
             ],
             code: '',
