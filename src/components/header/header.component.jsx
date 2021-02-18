@@ -26,7 +26,7 @@ const Header = () => {
                 </Link>
                 <a
                     className="option"
-                    href="http://localhost:4000"
+                    href="https://web-attack-simulation-server.herokuapp.com/"
                     target="_blank"
                 >
                     <FontAwesomeIcon icon={faChessRook} size="3x" />
